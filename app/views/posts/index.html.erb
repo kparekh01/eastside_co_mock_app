@@ -1,0 +1,29 @@
+
+<div ng-app="mock_app">
+  <div ng-controller="testCtrl">
+    <div id="wrapper">
+      <div id="columns">
+        <div ng-repeat="post in posts.items">
+          <div class="pin" ng-if="post.service_name == 'Manual'">
+            <img src="{{post.item_data.image_url}}"/>
+            <p>{{post.item_data.text}}</p>
+            <span>{{post.item_data.link_text}}</span>
+          </div>
+          <div class="pin"  ng-if="post.service_name == 'Twitter'">
+            <div class="twitter"></div>
+            <h4 align='center'>{{post.item_data.user.username}}</h4>
+            <p class="tag-words" align='center'>{{post.item_data.tweet}}</p>
+          </div>
+          <div class="pin"  ng-if="post.service_name == 'Instagram'">
+            <div class="instagram"></div>
+            <img src="{{post.item_data.user.avatar}}"/>
+            <h4>{{post.item_data.user.username}}</h4>
+            <p class="tag-words">{{post.item_data.caption}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1 align='center'><a href="#" id="load">Load More</a></h1>

@@ -3,12 +3,17 @@
   <head>
     <title>EastsideCoMockApp</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <table width='100%'>
+    <tr>
+    <th>Filter #1</th>
+    <th>Filter #2</th>
+    <th>Filter #3</th>
+     </table>
     <%= yield %>
   </body>
 </html>
